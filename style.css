@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+p {
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(214, 224, 255);
+}
+
+.card {
+  min-height: max-content;
+  border-radius: 25px;
+  display: flex;
+  overflow: hidden;
+  background-color: white;
+  flex-direction: column;
+}
+
+.card .header img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card .body {
+  padding: 5% 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .body p {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 15px;
+  color: #8e92a5;
+}
+
+.card .body .annual {
+  width: 100%;
+  background-color: #f6f9ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.card .body .annual .price {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  margin-left: 5%;
+}
+
+.card .body .annual .price span:nth-child(1) {
+  font-weight: bold;
+}
+
+.card .body button {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: medium;
+  padding: 0.7em 0px;
+  font-weight: bold;
+  margin-top: 20px;
+  background-color: hsl(245, 75%, 52%);
+  color: white;
+  box-shadow: 0px 5px 20px 2px hsla(245, 75%, 52%, 0.5);
+  cursor: pointer;
+}
+
+/* Small Mobile */
+@media screen and (max-width: 359px) {
+  a,
+  span {
+    font-size: 12px;
+  }
+
+  .card {
+    width: 280px;
+  }
+
+  .card .body button {
+    font-size: small;
+  }
+
+  h3 {
+    font-size: small;
+  }
+}
+
+/* Mobile */
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .card {
+    width: 85%;
+    max-width: 370px;
+    max-height: 600px;
+  }
+
+  .card .body button {
+    font-size: medium;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 600px) and (max-width: 992px) {
+  .card {
+    width: 65%;
+    max-width: 500px;
+  }
+
+  .card .body h2 {
+    font-size: 30px;
+  }
+
+  .card .body span {
+    font-size: 20px;
+  }
+
+  .card .body p {
+    font-size: 22px;
+  }
+
+  .card .body button {
+    font-size: larger;
+  }
+}
+
+/* Small pc */
+@media screen and (min-width: 993px) and (max-width: 1366px) {
+  .card {
+    width: 25%;
+    min-width: 350px;
+  }
+}
+
+/* Big pc */
+@media screen and (min-width: 1401px) {
+  .card {
+    width: 30%;
+  }
+
+  .card .body .annual .price {
+    margin-left: 7%;
+  }
+
+  .card .body .annual img {
+    transform: scale(1.2);
+  }
+
+  .card .body h2 {
+    font-size: 35px;
+  }
+
+  .card .body h3 {
+    font-size: 18px;
+  }
+
+  .card .body span,
+  a {
+    font-size: 20px;
+  }
+
+  .card .body p {
+    font-size: 20px;
+  }
+
+  .card .body button {
+    margin-top: 1.3em;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .card {
+    width: 28%;
+  }
+
+  .card .body h3 {
+    font-size: 20px;
+  }
+
+  .card .body p {
+    font-size: 22px;
+  }
+
+  .card .body span,
+  a {
+    font-size: 22px;
+  }
+}
